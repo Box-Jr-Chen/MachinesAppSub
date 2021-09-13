@@ -8,7 +8,7 @@ function App() {
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <p>
-        This is a test for Amplify
+        This is a test for Amplify 2
           
         </p>
         <a
