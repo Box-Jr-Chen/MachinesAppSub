@@ -10,6 +10,7 @@ function App() {
         <img src={logo} className="App-logo" alt="logo" />
         <p>
         This is auto UI
+        
         </p>
       </header>
       <AmplifySignOut></AmplifySignOut>
