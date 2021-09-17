@@ -9,6 +9,7 @@ import { API, Storage } from 'aws-amplify';
 
 const initialFormState ={name:'',description:''}
 
+
 function App() {
     const [notes,setNotes] = useState([]);
     const [formData,setFormData] = useState(initialFormState);
