@@ -1,0 +1,20 @@
+{
+  "dev": {
+    "awscloudformation": {
+      "AuthRoleName": "amplify-machinesubapp-dev-60456-authRole",
+      "UnauthRoleArn": "arn:aws:iam::564468534313:role/amplify-machinesubapp-dev-60456-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::564468534313:role/amplify-machinesubapp-dev-60456-authRole",
+      "Region": "ap-southeast-1",
+      "DeploymentBucketName": "amplify-machinesubapp-dev-60456-deployment",
+      "UnauthRoleName": "amplify-machinesubapp-dev-60456-unauthRole",
+      "StackName": "amplify-machinesubapp-dev-60456",
+      "StackId": "arn:aws:cloudformation:ap-southeast-1:564468534313:stack/amplify-machinesubapp-dev-60456/ccd90860-15a7-11ec-a234-0627116e656a",
+      "AmplifyAppId": "dxejqgh2tke9z"
+    },
+    "categories": {
+      "auth": {
+        "machinesubappe30d5466": {}
+      }
+    }
+  }
+}
