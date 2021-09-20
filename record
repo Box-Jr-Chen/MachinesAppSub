@@ -1,0 +1,19 @@
+    // "start": "react-scripts start",
+    // "build": "react-scripts build",
+    // "test": "react-scripts test",
+    // "eject": "react-scripts eject"
+
+
+当执行 npm install react-app-rewired --save-dev 之后
+运行项目就报错：
+
+The "injectBabelPlugin" helper has been deprecated as of v2.0. You can use customize-cra plugins in replacement - https://github.com/arackaf/customize-cra#available-plugins
+
+原因： react-scripts 升级到 2.1.2 以后破坏了 react-app-rewired;然后 react-app-rewired 升级到 2.x 以后直接干掉了所有 helpers。
+
+解决方法：把react-app-rewired 进行降级后可以了
+
+即：
+
+
+npm install react-app-rewired@2.0.2-next.0
