@@ -17,3 +17,11 @@ The "injectBabelPlugin" helper has been deprecated as of v2.0. You can use custo
 
 
 npm install react-app-rewired@2.0.2-next.0
+
+
+
+//aws cli install  && dynamoDB
+
+1.   npm i -g @aws-amplify/cli
+
+2.   npm i -g aws-amplify  @aws-amplify/ui-react

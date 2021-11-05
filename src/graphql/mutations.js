@@ -1,46 +1,103 @@
 /* eslint-disable */
 // this is an auto generated file. This will be overwritten
 
-export const createNote = /* GraphQL */ `
-  mutation CreateNote(
-    $input: CreateNoteInput!
-    $condition: ModelNoteConditionInput
+export const createRecord = /* GraphQL */ `
+  mutation CreateRecord(
+    $input: CreateRecordInput!
+    $condition: ModelRecordConditionInput
   ) {
-    createNote(input: $input, condition: $condition) {
+    createRecord(input: $input, condition: $condition) {
       id
       name
-      description
-      image
+      institution
+      app
+      sub_time
+      sub_start
+      active
       createdAt
       updatedAt
     }
   }
 `;
-export const updateNote = /* GraphQL */ `
-  mutation UpdateNote(
-    $input: UpdateNoteInput!
-    $condition: ModelNoteConditionInput
+export const updateRecord = /* GraphQL */ `
+  mutation UpdateRecord(
+    $input: UpdateRecordInput!
+    $condition: ModelRecordConditionInput
   ) {
-    updateNote(input: $input, condition: $condition) {
+    updateRecord(input: $input, condition: $condition) {
       id
       name
-      description
-      image
+      institution
+      app
+      sub_time
+      sub_start
+      active
       createdAt
       updatedAt
     }
   }
 `;
-export const deleteNote = /* GraphQL */ `
-  mutation DeleteNote(
-    $input: DeleteNoteInput!
-    $condition: ModelNoteConditionInput
+export const deleteRecord = /* GraphQL */ `
+  mutation DeleteRecord(
+    $input: DeleteRecordInput!
+    $condition: ModelRecordConditionInput
   ) {
-    deleteNote(input: $input, condition: $condition) {
+    deleteRecord(input: $input, condition: $condition) {
       id
       name
+      institution
+      app
+      sub_time
+      sub_start
+      active
+      createdAt
+      updatedAt
+    }
+  }
+`;
+export const createApp = /* GraphQL */ `
+  mutation CreateApp(
+    $input: CreateAppInput!
+    $condition: ModelAppConditionInput
+  ) {
+    createApp(input: $input, condition: $condition) {
+      id
+      name
+      version
+      update_time
       description
-      image
+      createdAt
+      updatedAt
+    }
+  }
+`;
+export const updateApp = /* GraphQL */ `
+  mutation UpdateApp(
+    $input: UpdateAppInput!
+    $condition: ModelAppConditionInput
+  ) {
+    updateApp(input: $input, condition: $condition) {
+      id
+      name
+      version
+      update_time
+      description
+      createdAt
+      updatedAt
+    }
+  }
+`;
+export const deleteApp = /* GraphQL */ `
+  mutation DeleteApp(
+    $input: DeleteAppInput!
+    $condition: ModelAppConditionInput
+  ) {
+    deleteApp(input: $input, condition: $condition) {
+      id
+      name
+      version
+      update_time
+      description
       createdAt
       updatedAt
     }

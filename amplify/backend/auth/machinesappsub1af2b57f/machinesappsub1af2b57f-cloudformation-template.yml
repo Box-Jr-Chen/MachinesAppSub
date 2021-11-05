@@ -149,7 +149,7 @@ Resources:
   # Created to allow the UserPool SMS Config to publish via the Simple Notification Service during MFA Process
     Type: AWS::IAM::Role
     Properties:
-      RoleName: !If [ShouldNotCreateEnvResources, 'machine30d5466_sns-role', !Join ['',[ 'sns', 'e30d5466', !Select [3, !Split ['-', !Ref 'AWS::StackName']], '-', !Ref env]]]
+      RoleName: !If [ShouldNotCreateEnvResources, 'machin1af2b57f_sns-role', !Join ['',[ 'sns', '1af2b57f', !Select [3, !Split ['-', !Ref 'AWS::StackName']], '-', !Ref env]]]
       AssumeRolePolicyDocument:
         Version: "2012-10-17"
         Statement:
@@ -161,10 +161,10 @@ Resources:
               - "sts:AssumeRole"
             Condition:
               StringEquals:
-                sts:ExternalId: machine30d5466_role_external_id
+                sts:ExternalId: machin1af2b57f_role_external_id
       Policies:
         -
-          PolicyName: machine30d5466-sns-policy
+          PolicyName: machin1af2b57f-sns-policy
           PolicyDocument:
             Version: "2012-10-17"
             Statement:
@@ -214,14 +214,12 @@ Resources:
           RequireUppercase: false
       
       
-      AliasAttributes: !Ref aliasAttributes
-      
       MfaConfiguration: !Ref mfaConfiguration
       SmsVerificationMessage: !Ref smsVerificationMessage
       SmsAuthenticationMessage: !Ref smsAuthenticationMessage
       SmsConfiguration:
         SnsCallerArn: !GetAtt SNSRole.Arn
-        ExternalId: machine30d5466_role_external_id
+        ExternalId: machin1af2b57f_role_external_id
     
   
   UserPoolClientWeb:
@@ -229,7 +227,7 @@ Resources:
   # Depends on UserPool for ID reference
     Type: "AWS::Cognito::UserPoolClient"
     Properties:
-      ClientName: machine30d5466_app_clientWeb
+      ClientName: machin1af2b57f_app_clientWeb
       
       RefreshTokenValidity: !Ref userpoolClientRefreshTokenValidity
       UserPoolId: !Ref UserPool
@@ -239,7 +237,7 @@ Resources:
   # Depends on UserPool for ID reference
     Type: "AWS::Cognito::UserPoolClient"
     Properties:
-      ClientName: machine30d5466_app_client
+      ClientName: machin1af2b57f_app_client
       
       GenerateSecret: !Ref userpoolClientGenerateSecret
       RefreshTokenValidity: !Ref userpoolClientRefreshTokenValidity
@@ -250,7 +248,7 @@ Resources:
   # Created to execute Lambda which gets userpool app client config values
     Type: 'AWS::IAM::Role'
     Properties:
-      RoleName: !If [ShouldNotCreateEnvResources, !Ref userpoolClientLambdaRole, !Join ['',['upClientLambdaRole', 'e30d5466', !Select [3, !Split ['-', !Ref 'AWS::StackName']], '-', !Ref env]]]
+      RoleName: !If [ShouldNotCreateEnvResources, !Ref userpoolClientLambdaRole, !Join ['',['upClientLambdaRole', '1af2b57f', !Select [3, !Split ['-', !Ref 'AWS::StackName']], '-', !Ref env]]]
       AssumeRolePolicyDocument:
         Version: '2012-10-17'
         Statement:
@@ -304,7 +302,7 @@ Resources:
   # Marked as depending on UserPoolClientRole for easier to understand CFN sequencing
     Type: 'AWS::IAM::Policy'
     Properties:
-      PolicyName: machine30d5466_userpoolclient_lambda_iam_policy
+      PolicyName: machin1af2b57f_userpoolclient_lambda_iam_policy
       Roles:
         - !Ref UserPoolClientRole
       PolicyDocument:
@@ -321,7 +319,7 @@ Resources:
   # Marked as depending on UserPoolClientLambdaPolicy for easier to understand CFN sequencing
     Type: 'AWS::IAM::Policy'
     Properties:
-      PolicyName: machine30d5466_userpoolclient_lambda_log_policy
+      PolicyName: machin1af2b57f_userpoolclient_lambda_log_policy
       Roles:
         - !Ref UserPoolClientRole
       PolicyDocument:
@@ -361,7 +359,7 @@ Resources:
   # Always created
     Type: AWS::Cognito::IdentityPool
     Properties:
-      IdentityPoolName: !If [ShouldNotCreateEnvResources, 'machinesubappe30d5466_identitypool_e30d5466', !Join ['',['machinesubappe30d5466_identitypool_e30d5466', '__', !Ref env]]]
+      IdentityPoolName: !If [ShouldNotCreateEnvResources, 'machinesappsub1af2b57f_identitypool_1af2b57f', !Join ['',['machinesappsub1af2b57f_identitypool_1af2b57f', '__', !Ref env]]]
       
       CognitoIdentityProviders:
         - ClientId:  !Ref UserPoolClient

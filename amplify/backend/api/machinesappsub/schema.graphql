@@ -1,0 +1,17 @@
+type Record @model {
+  id: ID!
+  name: String!
+  institution: String!
+  app: String!
+  sub_time: String!
+  sub_start: String!
+  active: String
+}
+
+type App @model {
+  id: ID!
+  name: String!
+  version: String!
+  update_time: String!
+  description: String!
+}

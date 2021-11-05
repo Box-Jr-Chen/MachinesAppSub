@@ -1,30 +1,6 @@
 {
-  "auth": {
-    "machinesubappe30d5466": {
-      "service": "Cognito",
-      "providerPlugin": "awscloudformation",
-      "dependsOn": [],
-      "customAuth": false,
-      "frontendAuthConfig": {
-        "loginMechanisms": [
-          "EMAIL"
-        ],
-        "signupAttributes": [
-          "EMAIL"
-        ],
-        "passwordProtectionSettings": {
-          "passwordPolicyMinLength": 8,
-          "passwordPolicyCharacters": []
-        },
-        "mfaConfiguration": "OFF",
-        "mfaTypes": [
-          "SMS"
-        ]
-      }
-    }
-  },
   "api": {
-    "noteapp": {
+    "machinesappsub": {
       "service": "AppSync",
       "providerPlugin": "awscloudformation",
       "output": {
@@ -33,18 +9,12 @@
             "authenticationType": "API_KEY",
             "apiKeyConfig": {
               "apiKeyExpirationDays": 7,
-              "description": "AKIAYG3HSJQUVDLIDDIM"
+              "description": ""
             }
           },
           "additionalAuthenticationProviders": []
         }
       }
-    }
-  },
-  "storage": {
-    "imagestorage": {
-      "service": "S3",
-      "providerPlugin": "awscloudformation"
     }
   }
 }
